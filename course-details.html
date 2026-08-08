@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Python Programming Masterclass — LearnHub</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .course-hero{background:var(--navy);color:#fff;padding:52px 0;}
+  .course-hero .course-cat{color:var(--amber);}
+  .course-hero h1{color:#fff;font-size:34px;margin-bottom:14px;}
+  .course-hero p{color:#C7CEE0;max-width:640px;}
+  .course-hero .stat-row{display:flex;gap:28px;margin-top:26px;}
+  .course-hero .stat-row div strong{display:block;font-family:'Space Grotesk',sans-serif;font-size:20px;color:#fff;}
+  .course-hero .stat-row div span{font-size:12px;color:#9AA5C4;}
+  .details-layout{display:flex;gap:40px;align-items:flex-start;}
+  .details-main{flex:1;}
+  .details-side{width:320px;flex:none;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:var(--shadow);position:sticky;top:100px;}
+  .details-side .dp-price{font-family:'Space Grotesk',sans-serif;font-size:30px;color:var(--navy);margin-bottom:16px;}
+  .learn-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 20px;margin-bottom:36px;}
+  .learn-item{display:flex;gap:9px;font-size:13.5px;color:var(--ink);}
+  .learn-item svg{flex:none;color:var(--emerald);margin-top:2px;}
+</style>
+</head>
+<body data-ai-site-public-key="f7c57d67f88f74ed5af95c8e51fdd155">
+
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo"><span class="dot"></span>LearnHub</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="courses.html" class="active">Courses</a>
+      <a href="resources.html">Resources</a>
+      <a href="pricing.html">Pricing</a>
+    </div>
+    <div class="nav-right">
+      <div class="nav-search">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input type="text" placeholder="Search courses...">
+      </div>
+      <span class="plan-pill" data-plan-pill>Free plan</span>
+      <button class="avatar-btn" data-avatar>A</button>
+    </div>
+  </div>
+</nav>
+
+<section class="course-hero">
+  <div class="container">
+    <div class="course-cat" style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin-bottom:10px;">Data &amp; AI · Intermediate</div>
+    <h1>Python Programming Masterclass</h1>
+    <p>Learn Python from fundamentals to advanced programming through practical exercises and real-world projects, including automation, APIs, and data analysis.</p>
+    <div class="stat-row">
+      <div><strong>42 hrs</strong><span>Duration</span></div>
+      <div><strong>185</strong><span>Lessons</span></div>
+      <div><strong>24,500</strong><span>Students</span></div>
+      <div><strong>4.9 ★</strong><span>Rating</span></div>
+      <div><strong>Yes</strong><span>Certificate</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-tight">
+  <div class="container details-layout">
+    <div class="details-main">
+      <h3>What you'll learn</h3>
+      <div class="learn-grid">
+        <div class="learn-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg>Python fundamentals</div>
+        <div class="learn-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg>Variables &amp; data types</div>
+        <div class="learn-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg>Conditions &amp; loops</div>
+        <div class="learn-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg>Functions</div>
+        <div class="learn-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg>Object-oriented programming</div>
+        <div class="learn-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg>File handling</div>
+        <div class="learn-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg>APIs &amp; error handling</div>
+        <div class="learn-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg>Databases &amp; automation</div>
+        <div class="learn-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg>Data analysis with Python</div>
+        <div class="learn-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg>Decorators &amp; generators</div>
+      </div>
+
+      <h3>Course curriculum</h3>
+      <div id="curriculum"></div>
+    </div>
+
+    <aside class="details-side">
+      <div class="dp-price">₹1,499</div>
+      <button class="btn btn-primary btn-block" style="margin-bottom:10px;" onclick="requirePremium('Python Programming Masterclass')" data-drip-event="enroll" data-drip-event-name="Enroll now">Enroll Now</button>
+      <button class="btn btn-ghost btn-block" onclick="showToast('✓ Course added to your learning list')">Add to Learning List</button>
+      <div class="divider" style="margin:20px 0;"></div>
+      <p style="font-size:13px;margin:0;">Includes: certificate of completion, downloadable resources, and lifetime updates for Student, Pro &amp; Lifetime members.</p>
+    </aside>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© 2026 LearnHub. All rights reserved.</span>
+      <span>Made for frontend testing — no backend required.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="main.js"></script>
+<script>
+  const CURRICULUM = [
+    { title: "Module 1 — Python Fundamentals", meta: "6 lessons · 3h 40m", premium:false,
+      lessons: ["Introduction to Python","Installing Python","Variables","Data Types","Operators","Input & Output"] },
+    { title: "Module 2 — Control Flow", meta: "4 lessons · 2h 55m", premium:false,
+      lessons: ["If / Else","Loops","Nested loops","Break & Continue"] },
+    { title: "Module 3 — Functions", meta: "4 lessons · 3h 10m", premium:true,
+      lessons: ["Creating functions","Parameters","Return values","Lambda functions"] },
+    { title: "Module 4 — Object-Oriented Programming", meta: "5 lessons · 4h 20m", premium:true,
+      lessons: ["Classes","Objects","Inheritance","Polymorphism","Encapsulation"] },
+    { title: "Module 5 — Advanced Python", meta: "5 lessons · 5h 05m", premium:true,
+      lessons: ["Decorators","Generators","Iterators","Context managers","Virtual environments"] },
+    { title: "Module 6 — Real-World Projects", meta: "4 lessons · 6h 45m", premium:true,
+      lessons: ["Expense tracker","Web scraper","Data analysis project","API application"] },
+  ];
+
+  function renderCurriculum(){
+    const unlocked = hasPremiumAccess();
+    const el = document.getElementById("curriculum");
+    el.innerHTML = CURRICULUM.map((mod, mi)=>{
+      const locked = mod.premium && !unlocked;
+      return `
+      <div class="module" id="mod-${mi}">
+        <div class="module-head" onclick="toggleModule('mod-${mi}')">
+          <h4>${mod.title} ${mod.premium ? '<span class="ltag" style="margin-left:8px;">🔒 Premium</span>':''}</h4>
+          <div style="display:flex;align-items:center;gap:14px;">
+            <span class="m-meta">${mod.meta}</span>
+            <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg>
+          </div>
+        </div>
+        <div class="module-body">
+          ${mod.lessons.map(l=>`
+            <div class="lesson-row ${locked ? 'is-locked':''}" ${locked ? `onclick="requirePremium('${l}')" style="cursor:pointer;"` : ''}>
+              <span class="lstate">${locked ? '🔒' : '✓'}</span>
+              <span>${l}</span>
+              ${locked ? '<span class="ltag">Unlock Premium</span>' : ''}
+            </div>`).join("")}
+        </div>
+      </div>`;
+    }).join("");
+  }
+
+  document.addEventListener("DOMContentLoaded", renderCurriculum);
+  const _origSetPlan = setPlan;
+  setPlan = function(p){ _origSetPlan(p); renderCurriculum(); };
+</script>
+<script src="https://intentosphere.com/assets/js/ai_site_embed.js?v=20260703a" defer data-ai-site-public-key="f7c57d67f88f74ed5af95c8e51fdd155"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Resources — LearnHub</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .res-icon{width:38px;height:38px;border-radius:10px;background:var(--emerald-soft);color:var(--emerald);display:flex;align-items:center;justify-content:center;font-size:16px;}
+  .resource-card.is-locked .res-icon{background:#FFF4DC;color:var(--amber-ink);}
+  .res-foot{margin-top:auto;display:flex;justify-content:space-between;align-items:center;}
+</style>
+</head>
+<body data-ai-site-public-key="f7c57d67f88f74ed5af95c8e51fdd155">
+
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo"><span class="dot"></span>LearnHub</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="resources.html">Resources</a>
+      <a href="pricing.html">Pricing</a>
+    </div>
+    <div class="nav-right">
+      <div class="nav-search">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input type="text" placeholder="Search courses...">
+      </div>
+      <span class="plan-pill" data-plan-pill>Free plan</span>
+      <button class="avatar-btn" data-avatar>A</button>
+    </div>
+  </div>
+</nav>
+
+<section class="section-tight">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <h2>Resource library</h2>
+        <p>Cheat sheets, ebooks, templates, and interview guides. Free items are open to everyone — premium items unlock with any paid plan.</p>
+      </div>
+    </div>
+    <div class="resource-grid" id="resourceGrid"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© 2026 LearnHub. All rights reserved.</span>
+      <span>Made for frontend testing — no backend required.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="main.js"></script>
+<script>
+  function renderResources(){
+    const unlocked = hasPremiumAccess();
+    const el = document.getElementById("resourceGrid");
+    el.innerHTML = RESOURCES.map(r=>{
+      const locked = r.premium && !unlocked;
+      return `
+      <div class="resource-card ${locked ? 'is-locked':''}">
+        <div class="res-icon">${locked ? '🔒' : '📄'}</div>
+        <div class="res-type">${r.type}</div>
+        <h4>${r.title}</h4>
+        <div class="res-foot">
+          ${r.premium ? `<span class="badge-premium" style="position:static;padding:4px 9px;border-radius:6px;font-size:10.5px;font-weight:700;">Premium</span>`
+                      : `<span class="badge-free" style="position:static;padding:4px 9px;border-radius:6px;font-size:10.5px;font-weight:700;color:var(--emerald);background:var(--emerald-soft);">Free</span>`}
+          <button class="btn btn-sm ${locked ? 'btn-outline':'btn-primary'}" onclick="${locked ? `requirePremium('${r.title}')` : `showToast('✓ Downloading \\'${r.title}\\'')`}">
+            ${locked ? 'Unlock' : 'Download'}
+          </button>
+        </div>
+      </div>`;
+    }).join("");
+  }
+  document.addEventListener("DOMContentLoaded", renderResources);
+  const _origSetPlan2 = setPlan;
+  setPlan = function(p){ _origSetPlan2(p); renderResources(); };
+</script>
+<script src="https://intentosphere.com/assets/js/ai_site_embed.js?v=20260703a" defer data-ai-site-public-key="f7c57d67f88f74ed5af95c8e51fdd155"></script>
+</body>
+</html>

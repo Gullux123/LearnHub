@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pricing — LearnHub</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-ai-site-public-key="f7c57d67f88f74ed5af95c8e51fdd155">
+
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo"><span class="dot"></span>LearnHub</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="resources.html">Resources</a>
+      <a href="pricing.html">Pricing</a>
+    </div>
+    <div class="nav-right">
+      <div class="nav-search">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input type="text" placeholder="Search courses...">
+      </div>
+      <span class="plan-pill" data-plan-pill>Free plan</span>
+      <button class="avatar-btn" data-avatar>A</button>
+    </div>
+  </div>
+</nav>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head" style="display:block;text-align:center;">
+      <h2 style="font-size:36px;">Simple pricing, real career outcomes</h2>
+      <p class="mx-auto" style="text-align:center;">Start free. Upgrade any time to unlock every course, project, and interview prep tool.</p>
+    </div>
+
+    <div class="billing-toggle">
+      <span id="labelMonthly" style="font-size:14px;font-weight:600;">Monthly</span>
+      <button class="toggle-switch" id="billingToggleBtn" onclick="toggleBilling()"><span class="knob"></span></button>
+      <span id="labelYearly" style="font-size:14px;font-weight:600;">Yearly</span>
+      <span class="save-chip">Save 30%</span>
+    </div>
+
+    <div class="pricing-grid" id="pricingGrid"></div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <h2>What's locked on the Free plan</h2>
+        <p>A quick look at the premium content unlocked the moment you upgrade.</p>
+      </div>
+    </div>
+    <div class="locked-block">
+      <div class="lb-info"><h5>🔒 Advanced course modules</h5><p>Full curriculums across all 120+ courses, including projects and quizzes.</p></div>
+      <span class="badge badge-premium" style="position:static;">Premium</span>
+    </div>
+    <div class="locked-block">
+      <div class="lb-info"><h5>🔒 Interview question banks</h5><p>500+ technical, HR, and behavioural interview questions with model answers.</p></div>
+      <span class="badge badge-premium" style="position:static;">Premium</span>
+    </div>
+    <div class="locked-block">
+      <div class="lb-info"><h5>🔒 Downloadable resources</h5><p>Cheat sheets, resume templates, and dashboard templates for offline use.</p></div>
+      <span class="badge badge-premium" style="position:static;">Premium</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© 2026 LearnHub. All rights reserved.</span>
+      <span>Made for frontend testing — no backend required.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="checkoutModal">
+  <div class="modal" id="checkoutBody">
+    <button class="modal-close" onclick="closeModal('checkoutModal')">✕</button>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="main.js"></script>
+<script src="pricing.js"></script>
+<script src="https://intentosphere.com/assets/js/ai_site_embed.js?v=20260703a" defer data-ai-site-public-key="f7c57d67f88f74ed5af95c8e51fdd155"></script>
+</body>
+</html>
