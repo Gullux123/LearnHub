@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LearnHub — Learn Skills. Build Projects. Get Hired.</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo"><span class="dot"></span>LearnHub</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="resources.html">Resources</a>
+      <a href="pricing.html">Pricing</a>
+    </div>
+    <div class="nav-right">
+      <div class="nav-search">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input type="text" placeholder="Search courses...">
+      </div>
+      <span class="plan-pill" data-plan-pill>Free plan</span>
+      <button class="avatar-btn" data-avatar>A</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-copy">
+      <span class="eyebrow">50,000+ learners already onboard</span>
+      <h1>Learn Skills. Build Projects.<br><span>Get Hired.</span></h1>
+      <p class="lead">Master in-demand skills through structured courses, real-world projects, expert resources, and interview preparation — all in one platform.</p>
+      <div class="hero-actions">
+        <a href="courses.html" class="btn btn-primary">Explore Courses</a>
+        <a href="pricing.html" class="btn btn-outline">Start Learning Free</a>
+      </div>
+      <div class="trust-row">
+        <div class="trust-item"><strong>50,000+</strong><span>Learners</span></div>
+        <div class="trust-item"><strong>120+</strong><span>Courses</span></div>
+        <div class="trust-item"><strong>500+</strong><span>Projects</span></div>
+        <div class="trust-item"><strong>95%</strong><span>Satisfaction</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="ledger">
+        <div class="ledger-head">
+          <div>
+            <strong>Python Programming Masterclass</strong><br>
+            <span>Module 4 · Object-Oriented Programming</span>
+          </div>
+        </div>
+        <div class="ledger-row done"><span class="ledger-num">✓</span><span class="ledger-title">Classes &amp; Objects</span><span class="ledger-tag">Done</span></div>
+        <div class="ledger-row done"><span class="ledger-num">✓</span><span class="ledger-title">Inheritance</span><span class="ledger-tag">Done</span></div>
+        <div class="ledger-row"><span class="ledger-num">09</span><span class="ledger-title">Polymorphism</span></div>
+        <div class="ledger-row locked"><span class="ledger-num">🔒</span><span class="ledger-title">Encapsulation</span><span class="ledger-tag">Premium</span></div>
+        <div class="ledger-row locked"><span class="ledger-num">🔒</span><span class="ledger-title">Advanced Decorators</span><span class="ledger-tag">Premium</span></div>
+        <div class="ledger-progress">
+          <div class="ledger-bar"><span></span></div>
+          <p>68% of curriculum complete</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CATEGORIES ===== -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <h2>Pick your path</h2>
+        <p>Four learning tracks covering everything from your first line of code to your first offer letter.</p>
+      </div>
+    </div>
+    <div class="cat-grid">
+      <a class="cat-card" href="courses.html?category=Development">
+        <div class="cat-icon">💻</div>
+        <h4>Development</h4>
+        <ul>
+          <li>HTML &amp; CSS · JavaScript</li>
+          <li>Python · Java · C++</li>
+          <li>React · Node.js</li>
+          <li>Full Stack Development</li>
+        </ul>
+        <div class="cat-count">42 courses →</div>
+      </a>
+      <a class="cat-card" href="courses.html?category=Data%20%26%20AI">
+        <div class="cat-icon">📊</div>
+        <h4>Data &amp; AI</h4>
+        <ul>
+          <li>SQL · Excel · Power BI</li>
+          <li>Data Analytics</li>
+          <li>Machine &amp; Deep Learning</li>
+          <li>Generative AI</li>
+        </ul>
+        <div class="cat-count">38 courses →</div>
+      </a>
+      <a class="cat-card" href="courses.html?category=Business">
+        <div class="cat-icon">📈</div>
+        <h4>Business</h4>
+        <ul>
+          <li>Business Analytics</li>
+          <li>Digital Marketing</li>
+          <li>Product Management</li>
+          <li>Financial Analysis</li>
+        </ul>
+        <div class="cat-count">24 courses →</div>
+      </a>
+      <a class="cat-card" href="resources.html">
+        <div class="cat-icon">🎯</div>
+        <h4>Career</h4>
+        <ul>
+          <li>Resume Building</li>
+          <li>Interview Preparation</li>
+          <li>Communication Skills</li>
+          <li>Career Strategy</li>
+        </ul>
+        <div class="cat-count">16 resources →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURED COURSES ===== -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <h2>Bestselling courses</h2>
+        <p>The most-enrolled courses on LearnHub this month, picked by 50,000+ learners.</p>
+      </div>
+      <a href="courses.html" class="btn btn-ghost">View all courses</a>
+    </div>
+    <div class="course-grid" id="featuredGrid"></div>
+  </div>
+</section>
+
+<!-- ===== PRICING TEASER ===== -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <h2>Free to start. Built to get you hired.</h2>
+        <p>Unlock full courses, projects, certificates, and interview prep whenever you're ready.</p>
+      </div>
+      <a href="pricing.html" class="btn btn-primary">See full pricing</a>
+    </div>
+    <div class="locked-block">
+      <div class="lb-info">
+        <h5>🔒 Advanced Python Decorators</h5>
+        <p>This lesson — and 200+ others like it — is available to Student, Pro, and Lifetime members.</p>
+      </div>
+      <a href="pricing.html" class="btn btn-amber btn-sm">Unlock Premium</a>
+    </div>
+    <div class="locked-block">
+      <div class="lb-info">
+        <h5>🔒 100 Python Interview Questions</h5>
+        <p>Full interview question banks, mock interviews, and case studies unlock with any paid plan.</p>
+      </div>
+      <a href="pricing.html" class="btn btn-amber btn-sm">Unlock Premium</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><span class="dot"></span>LearnHub</a>
+        <p>An online learning platform for technology, data, business, and career skills — courses, projects, and interview preparation in one place.</p>
+      </div>
+      <div class="footer-col">
+        <h5>LearnHub</h5>
+        <ul><li><a href="#">About</a></li><li><a href="#">Careers</a></li><li><a href="#">Blog</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h5>Learning</h5>
+        <ul><li><a href="courses.html">Courses</a></li><li><a href="resources.html">Resources</a></li><li><a href="pricing.html">Pricing</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h5>Support</h5>
+        <ul><li><a href="#">Help Center</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 LearnHub. All rights reserved.</span>
+      <span>Made for frontend testing — no backend required.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="main.js"></script>
+<script src="courses.js"></script>
+</body>
+</html>
