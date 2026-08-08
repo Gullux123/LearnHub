@@ -199,6 +199,13 @@ input,select,textarea{font-family:inherit;}
 .badge-free{background:#fff;color:var(--emerald);}
 .badge-premium{background:var(--navy);color:var(--amber);}
 .badge-bestseller{position:absolute;top:10px;right:10px;background:var(--amber);color:var(--amber-ink);}
+.wish-btn{
+  position:absolute;bottom:10px;right:10px;width:32px;height:32px;border-radius:50%;border:none;
+  background:rgba(255,255,255,0.92);color:var(--ink-soft);font-size:16px;display:flex;align-items:center;justify-content:center;
+  cursor:pointer;transition:transform .15s ease, color .15s ease;
+}
+.wish-btn:hover{transform:scale(1.08);}
+.wish-btn.is-active{color:#D64545;}
 .course-body{padding:18px 18px 20px;display:flex;flex-direction:column;flex:1;}
 .course-cat{font-size:11px;font-weight:700;color:var(--emerald);text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px;}
 .course-body h4{font-size:16px;line-height:1.35;margin-bottom:8px;min-height:44px;}
@@ -327,6 +334,21 @@ input,select,textarea{font-family:inherit;}
 @keyframes toastIn{from{opacity:0;transform:translateX(20px);}to{opacity:1;transform:none;}}
 .toast.leave{animation:toastOut .25s ease forwards;}
 @keyframes toastOut{to{opacity:0;transform:translateX(20px);}}
+
+/* ---------- Newsletter bar ---------- */
+.newsletter-bar{
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+  background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);
+  border-radius:16px;padding:26px 30px;margin-bottom:44px;
+}
+.newsletter-bar h4{color:#fff;font-size:17px;margin-bottom:4px;}
+.newsletter-bar p{color:#9AA5C4;margin:0;font-size:13px;}
+.newsletter-form{display:flex;gap:10px;flex:none;}
+.newsletter-form input{
+  width:230px;padding:11px 14px;border-radius:9px;border:1px solid rgba(255,255,255,0.16);
+  background:rgba(255,255,255,0.05);color:#fff;font-size:13.5px;
+}
+.newsletter-form input::placeholder{color:#7C86A3;}
 
 /* ---------- Footer ---------- */
 footer{background:var(--navy);color:#C7CEE0;padding:64px 0 30px;margin-top:60px;}

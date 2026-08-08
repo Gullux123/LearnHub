@@ -6,14 +6,35 @@ function initials(title){
   return title.split(" ").filter(w=>/^[A-Za-z]/.test(w)).slice(0,2).map(w=>w[0]).join("").toUpperCase();
 }
 
+function isWishlisted(id){
+  const list = JSON.parse(localStorage.getItem("lh_wishlist") || "[]");
+  return list.includes(id);
+}
+function toggleWishlist(id, title){
+  let list = JSON.parse(localStorage.getItem("lh_wishlist") || "[]");
+  const on = list.includes(id);
+  list = on ? list.filter(x=>x!==id) : [...list, id];
+  localStorage.setItem("lh_wishlist", JSON.stringify(list));
+  showToast(on ? `Removed "${title}" from wishlist` : `✓ Added "${title}" to wishlist`);
+  const btn = document.getElementById(`wish-${id}`);
+  if(btn){
+    btn.textContent = on ? "♡" : "♥";
+    btn.classList.toggle("is-active", !on);
+  }
+}
+
 function courseCardHTML(c){
   const priceLabel = c.price === 0 ? "Free" : `₹${c.price.toLocaleString("en-IN")}`;
+  const wished = isWishlisted(c.id);
   return `
   <div class="course-card">
     <div class="course-thumb">
       <span class="initials">${initials(c.title)}</span>
       ${c.premium ? `<span class="badge badge-premium">🔒 Premium</span>` : `<span class="badge badge-free">Free</span>`}
       ${c.bestseller ? `<span class="badge badge-bestseller">Bestseller</span>` : ""}
+      <button class="wish-btn ${wished ? 'is-active':''}" id="wish-${c.id}"
+        data-drip-event="wishlist" data-drip-event-name="Add to wishlist"
+        onclick="toggleWishlist(${c.id}, '${c.title.replace(/'/g,"\\'")}')" aria-label="Add to wishlist">${wished ? '♥':'♡'}</button>
     </div>
     <div class="course-body">
       <div class="course-cat">${c.category}</div>
@@ -28,7 +49,9 @@ function courseCardHTML(c){
       </div>
       <div class="course-footer">
         <span class="course-price ${c.price===0 ? 'is-free':''}">${priceLabel}</span>
-        <button class="btn btn-sm ${c.premium ? 'btn-outline':'btn-primary'}" onclick="viewCourse(${c.id})">View Course</button>
+        <button class="btn btn-sm ${c.premium ? 'btn-outline':'btn-primary'}"
+          data-drip-event="view_course" data-drip-event-name="View course"
+          onclick="viewCourse(${c.id})">View Course</button>
       </div>
     </div>
   </div>`;

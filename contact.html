@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact — LearnHub</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .contact-layout{display:flex;gap:50px;align-items:flex-start;}
+  .contact-form{flex:1;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:34px;box-shadow:var(--shadow);}
+  .contact-side{width:320px;flex:none;}
+  .contact-side .cs-item{display:flex;gap:14px;margin-bottom:22px;}
+  .contact-side .cs-icon{width:40px;height:40px;border-radius:10px;background:var(--emerald-soft);color:var(--emerald);display:flex;align-items:center;justify-content:center;flex:none;font-size:16px;}
+  .contact-side h5{margin:0 0 4px;font-size:14.5px;color:var(--navy);}
+  .contact-side p{margin:0;font-size:13px;}
+  .form-row{margin-bottom:18px;}
+  .form-row label{display:block;font-size:13px;font-weight:600;color:var(--navy);margin-bottom:7px;}
+  .form-row input, .form-row select, .form-row textarea{
+    width:100%;padding:12px 14px;border-radius:9px;border:1.5px solid var(--line);font-size:14px;background:#fff;color:var(--ink);
+  }
+  .form-row input:focus, .form-row select:focus, .form-row textarea:focus{outline:none;border-color:var(--navy);}
+  .form-row.has-error input, .form-row.has-error select, .form-row.has-error textarea{border-color:#D64545;}
+  .form-error{font-size:12px;color:#D64545;margin-top:5px;display:none;}
+  .form-row.has-error .form-error{display:block;}
+  .form-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .success-banner{
+    display:none;align-items:center;gap:12px;background:var(--emerald-soft);color:var(--emerald);
+    padding:16px 18px;border-radius:10px;margin-bottom:22px;font-size:13.5px;font-weight:600;
+  }
+  .success-banner.show{display:flex;}
+</style>
+</head>
+<body data-ai-site-public-key="f7c57d67f88f74ed5af95c8e51fdd155">
+
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo"><span class="dot"></span>LearnHub</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="resources.html">Resources</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-right">
+      <div class="nav-search">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input type="text" placeholder="Search courses...">
+      </div>
+      <span class="plan-pill" data-plan-pill>Free plan</span>
+      <button class="avatar-btn" data-avatar>A</button>
+    </div>
+  </div>
+</nav>
+
+<section class="section-tight">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <h2>Get in touch</h2>
+        <p>Questions about courses, billing, or partnerships — our team replies within one business day.</p>
+      </div>
+    </div>
+
+    <div class="contact-layout">
+      <div class="contact-form">
+        <div class="success-banner" id="successBanner">✓ Message sent successfully! We'll get back to you shortly.</div>
+        <form id="contactForm" novalidate>
+          <div class="form-grid-2">
+            <div class="form-row" id="row-name">
+              <label for="cName">Full name</label>
+              <input type="text" id="cName" name="name" placeholder="Alex Johnson">
+              <div class="form-error">Please enter your name.</div>
+            </div>
+            <div class="form-row" id="row-email">
+              <label for="cEmail">Email</label>
+              <input type="email" id="cEmail" name="email" placeholder="you@email.com">
+              <div class="form-error">Enter a valid email address.</div>
+            </div>
+          </div>
+          <div class="form-grid-2">
+            <div class="form-row" id="row-phone">
+              <label for="cPhone">Phone (optional)</label>
+              <input type="tel" id="cPhone" name="phone" placeholder="+91 98765 43210">
+            </div>
+            <div class="form-row" id="row-category">
+              <label for="cCategory">Category</label>
+              <select id="cCategory" name="category">
+                <option value="">Select a category</option>
+                <option>Technical Issue</option>
+                <option>Course Question</option>
+                <option>Billing</option>
+                <option>Account</option>
+                <option>Partnership</option>
+                <option>Other</option>
+              </select>
+              <div class="form-error">Please select a category.</div>
+            </div>
+          </div>
+          <div class="form-row" id="row-subject">
+            <label for="cSubject">Subject</label>
+            <input type="text" id="cSubject" name="subject" placeholder="What's this about?">
+            <div class="form-error">Please enter a subject.</div>
+          </div>
+          <div class="form-row" id="row-message">
+            <label for="cMessage">Message</label>
+            <textarea id="cMessage" name="message" rows="5" placeholder="Tell us more..."></textarea>
+            <div class="form-error">Please enter a message.</div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block" data-drip-event="contact" data-drip-event-name="Contact form submit">Send Message</button>
+        </form>
+      </div>
+
+      <div class="contact-side">
+        <div class="cs-item">
+          <div class="cs-icon">✉</div>
+          <div><h5>Email support</h5><p>support@learnhub.example — replies within 24 hours.</p></div>
+        </div>
+        <div class="cs-item">
+          <div class="cs-icon">💬</div>
+          <div><h5>Live chat</h5><p>Chat with our AI assistant anytime, right from this page.</p></div>
+        </div>
+        <div class="cs-item">
+          <div class="cs-icon">🤝</div>
+          <div><h5>Partnerships</h5><p>Studios and instructors: tell us about your course idea.</p></div>
+        </div>
+        <div class="cs-item">
+          <div class="cs-icon">📅</div>
+          <div><h5>Book a walkthrough</h5><p>Prefer a live call? Request a 20-minute product walkthrough.</p></div>
+        </div>
+        <button class="btn btn-outline btn-block" data-drip-event="book" data-drip-event-name="Book now" onclick="showToast('✓ Walkthrough request received')">Book a Walkthrough</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="newsletter-bar">
+      <div>
+        <h4>Get weekly course drops in your inbox</h4>
+        <p>No spam — just new courses, resources, and interview tips.</p>
+      </div>
+      <form class="newsletter-form" onsubmit="return handleNewsletterSubmit(event)">
+        <input type="email" name="email" placeholder="you@email.com" required>
+        <button type="submit" class="btn btn-amber btn-sm" data-drip-event="subscribe" data-drip-event-name="Newsletter signup">Subscribe</button>
+      </form>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 LearnHub. All rights reserved.</span>
+      <span>Made for frontend testing — no backend required.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="main.js"></script>
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    const fields = [
+      { id: "cName", row: "row-name", check: v => v.trim().length > 1 },
+      { id: "cEmail", row: "row-email", check: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) },
+      { id: "cCategory", row: "row-category", check: v => v.trim() !== "" },
+      { id: "cSubject", row: "row-subject", check: v => v.trim().length > 2 },
+      { id: "cMessage", row: "row-message", check: v => v.trim().length > 5 },
+    ];
+    let valid = true;
+    fields.forEach(f=>{
+      const el = document.getElementById(f.id);
+      const row = document.getElementById(f.row);
+      const ok = f.check(el.value);
+      row.classList.toggle("has-error", !ok);
+      if(!ok) valid = false;
+    });
+    if(!valid){
+      showToast("⚠ Please fix the highlighted fields");
+      return;
+    }
+    document.getElementById("successBanner").classList.add("show");
+    showToast("✓ Message sent successfully!");
+    this.reset();
+    setTimeout(()=> document.getElementById("successBanner").classList.remove("show"), 5000);
+  });
+</script>
+<script src="https://intentosphere.com/assets/js/ai_site_embed.js?v=20260703a" defer data-ai-site-public-key="f7c57d67f88f74ed5af95c8e51fdd155"></script>
+</body>
+</html>

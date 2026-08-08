@@ -111,6 +111,21 @@ function toggleModule(id){
   document.getElementById(id).classList.toggle("open");
 }
 
+/* ---------- Newsletter signup (Contacts capture) ---------- */
+function handleNewsletterSubmit(e){
+  e.preventDefault();
+  const form = e.target;
+  const email = form.querySelector('input[type="email"]').value.trim();
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if(!emailPattern.test(email)){
+    showToast("⚠ Enter a valid email address");
+    return false;
+  }
+  showToast("✓ Subscribed! Check your inbox");
+  form.reset();
+  return false;
+}
+
 /* ---------- Nav active link + init ---------- */
 document.addEventListener("DOMContentLoaded", ()=>{
   injectUpgradeModal();
