@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Checkout Complete — LearnHub</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .confirm-wrap{min-height:60vh;display:flex;align-items:center;justify-content:center;}
+  .confirm-card{max-width:520px;text-align:center;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:52px 44px;box-shadow:var(--shadow-lg);}
+  .confirm-icon{width:64px;height:64px;border-radius:50%;background:#FFF4DC;color:var(--amber-ink);display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 22px;}
+  .confirm-card h1{font-size:26px;margin-bottom:10px;}
+  .confirm-card p{margin-bottom:10px;}
+  .plan-badge{display:inline-block;margin-bottom:26px;font-size:12.5px;font-weight:700;color:var(--emerald);background:var(--emerald-soft);padding:6px 14px;border-radius:999px;}
+</style>
+</head>
+<body data-ai-site-public-key="f7c57d67f88f74ed5af95c8e51fdd155" data-drip-result="checkout_done">
+
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo"><span class="dot"></span>LearnHub</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="resources.html">Resources</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-right">
+      <span class="plan-pill" data-plan-pill>Free plan</span>
+      <button class="avatar-btn" data-avatar>A</button>
+    </div>
+  </div>
+</nav>
+
+<section class="section confirm-wrap">
+  <div class="confirm-card">
+    <div class="confirm-icon">🎉</div>
+    <h1>Checkout complete!</h1>
+    <p id="planLine">Your plan is now active.</p>
+    <div class="plan-badge" id="planBadge" data-plan-pill>Free plan</div>
+    <p></p>
+    <a href="courses.html" class="btn btn-primary">Start Learning</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© 2026 LearnHub. All rights reserved.</span>
+      <span>Made for frontend testing — no backend required.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="main.js"></script>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const planName = params.get("plan");
+  if(planName){
+    document.getElementById("planLine").textContent = `You're now on the ${planName}.`;
+    document.getElementById("planBadge").textContent = planName;
+    document.getElementById("planBadge").removeAttribute("data-plan-pill");
+  }
+</script>
+<script src="https://intentosphere.com/assets/js/ai_site_embed.js?v=20260703a" defer data-ai-site-public-key="f7c57d67f88f74ed5af95c8e51fdd155"></script>
+</body>
+</html>

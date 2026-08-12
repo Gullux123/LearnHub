@@ -113,9 +113,9 @@ function confirmCheckout(){
 }
 
 function finishCheckout(){
+  const plan = getPlan();
   closeModal("checkoutModal");
-  showToast(`✓ ${PLAN_LABELS[getPlan()]} activated`);
-  renderPricingGrid();
+  window.location.href = `checkout-complete.html?plan=${encodeURIComponent(PLAN_LABELS[plan])}`;
 }
 
 document.addEventListener("DOMContentLoaded", ()=>{

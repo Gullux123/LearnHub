@@ -83,7 +83,7 @@
                       : `<span class="badge-free" style="position:static;padding:4px 9px;border-radius:6px;font-size:10.5px;font-weight:700;color:var(--emerald);background:var(--emerald-soft);">Free</span>`}
           <button class="btn btn-sm ${locked ? 'btn-outline':'btn-primary'}"
             data-drip-event="${locked ? 'unlock_resource' : 'download_resource'}" data-drip-event-name="${locked ? 'Unlock' : 'Download'} — ${r.title}"
-            onclick="${locked ? `requirePremium('${r.title}')` : `showToast('✓ Downloading \\'${r.title}\\'')`}">
+            onclick="${locked ? `requirePremium('${r.title}')` : `window.location.href='download-complete.html?resource=${encodeURIComponent(r.title)}'`}">
             ${locked ? 'Unlock' : 'Download'}
           </button>
         </div>

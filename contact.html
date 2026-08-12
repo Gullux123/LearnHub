@@ -128,7 +128,7 @@
           <div class="cs-icon">📅</div>
           <div><h5>Book a walkthrough</h5><p>Prefer a live call? Request a 20-minute product walkthrough.</p></div>
         </div>
-        <button class="btn btn-outline btn-block" data-drip-event="book" data-drip-event-name="Book now" onclick="showToast('✓ Walkthrough request received')">Book a Walkthrough</button>
+        <button class="btn btn-outline btn-block" data-drip-event="book" data-drip-event-name="Book now" onclick="window.location.href='book-confirmed.html'">Book a Walkthrough</button>
       </div>
     </div>
   </div>
@@ -180,7 +180,7 @@
     document.getElementById("successBanner").classList.add("show");
     showToast("✓ Message sent successfully!");
     this.reset();
-    setTimeout(()=> document.getElementById("successBanner").classList.remove("show"), 5000);
+    setTimeout(()=> window.location.href = "thank-you.html", 900);
   });
 </script>
 <script src="https://intentosphere.com/assets/js/ai_site_embed.js?v=20260703a" defer data-ai-site-public-key="f7c57d67f88f74ed5af95c8e51fdd155"></script>
